@@ -1,0 +1,40 @@
+raman@raman:~$ cd Desktop
+raman@raman:~/Desktop$ mkdir D1
+raman@raman:~/Desktop$ cd D1
+raman@raman:~/Desktop/D1$ mkdir D11 D12 D13 D14
+raman@raman:~/Desktop/D1$ cd D11
+raman@raman:~/Desktop/D1/D11$ gedit f1.c
+raman@raman:~/Desktop/D1/D11$ mv f1.c myfile.c
+raman@raman:~/Desktop/D1/D11$ ls
+myfile.c
+raman@raman:~/Desktop/D1/D11$ cp myfile.c f2.c
+raman@raman:~/Desktop/D1/D11$ ls
+f2.c  myfile.c
+raman@raman:~/Desktop/D1/D11$ cd ..
+raman@raman:~/Desktop/D1$ mv "D11/myfile.c" "D14/"
+raman@raman:~/Desktop/D1$ ls -R
+.:
+D11  D12  D13  D14
+
+./D11:
+f2.c
+
+./D12:
+
+./D13:
+
+./D14:
+myfile.c
+raman@raman:~/Desktop/D1$ rmdir D12
+raman@raman:~/Desktop/D1$ ls -r
+D14  D13  D11
+raman@raman:~/Desktop/D1$ rm -r D14
+raman@raman:~/Desktop/D1$ ls -R
+.:
+D11  D13
+
+./D11:
+f2.c
+
+./D13:
+raman@raman:~/Desktop/D1$ 
